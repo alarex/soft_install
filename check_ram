@@ -1,0 +1,2 @@
+apt install dmidecode
+dmidecode -t memory | grep -Po '^\tMaximum Capacity: \K.*' &&  dmidecode --type 17 | grep -i size && dmidecode --type 17 | grep -i 'Part Number' &&  dmidecode -s baseboard-product-name
