@@ -1,3 +1,3 @@
 apt install dmidecode
-dmidecode -t memory | grep -Po '^\tMaximum Capacity: \K.*' | awk '{print "Maximum capacity: " $1}' &&  dmidecode --type 17 | grep -i size | awk '{print "Current size: " $2 $3}' && dmidecode --type 17 | grep -i 'Part Number' | awk '{print "RAM model: "  $3 " " $4}' &&  dmidecode -s baseboard-product-name | awk '{print "Motherboard model: " $1}'
+dmidecode -t memory | grep -Po '^\tMaximum Capacity: \K.*' | awk '{print "Maximum capacity: " $1}' &&  dmidecode --type 17 | grep -i size | awk '{print "Current size: " $2 $3}' && dmidecode --type 17 | grep -i 'Part Number' | awk '{print "RAM model: "  $3 " " $4}' &&  dmidecode -s baseboard-product-name | awk '{print "Motherboard model: " $1 $2 $3 $4}'
 
